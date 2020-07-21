@@ -8,7 +8,7 @@ const app = express();
 const PORT = 9000;
 
 const run = async (app) => {
-    const connected = connection.connect();
+    const connected = await connection.connect();
     routes.route(app, connected);
 }
 
